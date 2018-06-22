@@ -2,12 +2,12 @@
 // =============
 
 @white: #ffffff;
-@black: #4b4e4f;
-@blue: #078292;
-@light-grey: #78909c;
-@mid-grey: #546e7a;
-@dark-grey: #37474f;
-@red: #f26c4f;
+@black: #000000;
+@blue: #00247D;
+@light-grey: #dee7e7;
+@mid-grey: #B3B1B3;
+@dark-grey: #535657;
+@red: #DB0011;
 @green: #82ca9c;
 
 
@@ -18,13 +18,13 @@
 @primary-color: @blue;
 @primary-color-inverted: @white;
 // Buttons
-@secondary-color: @black;
+@secondary-color: @red;
 @secondary-color-inverted: @white;
 // Navigation Bar
-@tertiary-color: @white;
-@tertiary-color-inverted: @black;
+@tertiary-color: @dark-grey;
+@tertiary-color-inverted: @mid-grey;
 // Drawer
-@quaternary-color: @dark-grey;
+@quaternary-color: @mid-grey;
 @quaternary-color-inverted: @white;
 // Body
 @foreground-color: @black;
@@ -35,8 +35,8 @@
 @validation-error: @red;
 @validation-success: @green;
 // Disabled States
-@disabled-color: #727272;
-@disabled-color-inverted: #ccc;
+@disabled-color: #535657;
+@disabled-color-inverted: #dee7e7;
 
 @transparency: rgba(255,255,255,0.8);
 @transparency-fallback-png: url('assets/transparency-light.png');
@@ -52,7 +52,7 @@
 
 // Buttons
 @button-color: @secondary-color;
-@button-color-hover: darken(@button-color, 40%);
+@button-color-hover: @secondary-color;
 @button-color-disabled: @disabled-color;
 
 @button-text-color: @secondary-color-inverted;
@@ -60,13 +60,13 @@
 @button-text-color-disabled: @disabled-color-inverted;
 
 @button-border-color: @button-color;
-@button-border-color-hover: @button-color-hover;
+@button-border-color-hover: @primary-color-inverted;
 @button-border-color-disabled: @button-color-disabled;
 
 // Navigation 
-@navigation-color: @tertiary-color;
+@navigation-color: @secondary-color;
 
-@navigation-icon-color: @tertiary-color-inverted;
+@navigation-icon-color: @primary-color-inverted;
 @navigation-icon-color-hover: darken(@navigation-icon-color, 40%);
 
 @navigation-progress-color: @navigation-icon-color;
@@ -79,7 +79,7 @@
 
 // Drawer
 @drawer-color: @quaternary-color;
-@drawer-border-color: darken(@drawer-color, 20%);
+@drawer-border-color: @quaternary-color;
 
 @drawer-icon-color: @quaternary-color-inverted;
 @drawer-icon-color-hover: darken(@drawer-icon-color, 40%);
@@ -103,9 +103,9 @@
 @component-background-color: darken(@background-color, 10%);
 
 @item-color: @primary-color;
-@item-color-hover: darken(@item-color, 20%);
+@item-color-hover: @secondary-color;
 @item-color-disabled: @disabled-color;
-@item-color-visited: desaturate(@item-color, 90%);
+@item-color-visited: @secondary-color;
 @item-color-selected: @item-color-hover;
 
 @item-text-color: @primary-color-inverted;
@@ -117,15 +117,15 @@
 @item-body-color: @background-color;
 @item-body-text-color: @foreground-color;
 
-@item-border-color: @item-color;
+@item-border-color: @item-color-visited;
 @item-border-color-hover: @item-color-hover;
 @item-border-color-disabled: @item-color-disabled;
 @item-border-color-visited: @item-color-visited;
-@item-border-color-selected: @item-color-selected;
+@item-border-color-selected: @item-text-color;
 @item-border-color-inverted: @item-text-color;
 
 // Menu
-@menu-item-color: @primary-color;
+@menu-item-color: @background-color-inverted;
 @menu-item-text-color: @primary-color-inverted;
 @menu-item-progress-color: darken(@menu-item-color, 20%);
 @menu-item-progress-fill-color: @menu-item-text-color;

@@ -4,6 +4,7 @@
 .drawer {
     background-color: @drawer-color;
     color: @drawer-item-text-color;
+    font-family: @font-family;
 
     .drawer-toolbar {
         position: absolute;
@@ -37,10 +38,11 @@
 
     .drawer-item {
         .drawer-item-title {
-            .sub-title;
-        }
+            font-family: @font-family;
+            }
         
         .drawer-item-description {
+            font-family: @font-family;
         	font-size: @body-text-font-size;
         	line-height: @body-text-line-height;
         }
@@ -50,6 +52,7 @@
             color: @drawer-item-text-color;
             text-decoration: none;
             width: 100%;
+            font-family: @font-family;
             
             .no-touch &:hover {
                 background-color: @drawer-item-color-hover;
