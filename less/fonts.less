@@ -1,23 +1,45 @@
 // Font setup
 // ==========
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+//@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
-@font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+//@font-family: 'Merriweather', serif;
+//this is the correct code for getting the @import variable working - tested ok in test theme - commented all out for now
+
+//in order for preview mode to work correctly - this points to the fonts folder on the Adapt server - works in development only, then the author needs to manually edit this code on output, by removing the leading "/" on each URL, and adding fonts into the empty fonts folder in the exported SCORM package. On the latest version, the fonts have been embedded directly into the theme and referenced as per the below code without the leading "/". On testing this works both in preview and in SCORM output. Leaving this previous code commented out for reference.
+/*@font-face{
+    font-family: "Handel Gothic Bold";
+    src: url("/fonts/handel-gothic-bold-webfont.eot");
+    src: url("/fonts/handel-gothic-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("/fonts/handel-gothic-bold-webfont.woff") format("woff"), 
+       url("/fonts/handel-gothic-bold-webfont.ttf") format("truetype");
+}*/
+
+@font-face{
+    font-family: "Handel Gothic Bold";
+    src: url("fonts/handel-gothic-bold-webfont.eot");
+    src: url("fonts/handel-gothic-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("fonts/handel-gothic-bold-webfont.woff") format("woff"), 
+       url("fonts/handel-gothic-bold-webfont.ttf") format("truetype");
+}
+
+@font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @font-weight-light: 300;
 @font-weight-regular: 400;
 @font-weight-bold: 700;
 
 @menu-title-font-size: 48px;
-@page-title-font-size: 48px;
-@component-title-font-size: 36px;
-@item-title-font-size: 24px;
+@page-title-font-size: 44px;
+@article-title-font-size: 36px;
+@block-title-font-size: 28px;
+@component-title-font-size: 24px;
+@item-title-font-size: 16px;
 @sub-title-font-size: 18px;
 
 @body-text-font-size: 14px;
 @instruction-text-font-size: 14px;
-@button-text-font-size: 18px;
+@button-text-font-size: 16px;
 
 @title-line-height: 120%;
 @body-line-height: 140%;

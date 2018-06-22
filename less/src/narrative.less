@@ -7,15 +7,15 @@
         .item-title;
     }
     .narrative-content {
-        background: @item-color;
-        color: @item-text-color;
+        background: @primary-color-inverted;
+        color: @foreground-color;
     }
 
     .narrative-controls {
         width: (@icon-size * 2.5);
         height: (@icon-size * 2.5);
         margin-top: -(@icon-size * 2);
-        background-color:@item-color;
+        background-color:@primary-color-inverted;
 
         &:hover {
             background-color:@item-color-hover;
@@ -29,7 +29,7 @@
             font-size: (@icon-size * 1.25);
             font-weight: bold;
             margin: (@icon-size / 1.5);
-            color:@item-text-color;
+            color:@foreground-color;
         }
     }
 
@@ -57,7 +57,7 @@
 
                 .narrative-progress {
                     display: inline-block;
-                    background-color: darken(@item-color, 10%);
+                    background-color: darken(@item-text-color, 10%);
 
                     &.selected {
                         background-color: @component-background-color;
@@ -75,10 +75,10 @@
 
     .narrative-progress {
         background-color: darken(@component-background-color, 10%);
-        border:inherit;
+        border:@item-text-color;
 
         &.selected {
-            background-color: @item-color;
+            background-color: @item-text-color;
         }
     }
 
